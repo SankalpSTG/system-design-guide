@@ -1,3 +1,4 @@
+//Factory Pattern Implementation
 interface EmailService {
   send(recipient: string, message: string): void
 }
@@ -14,7 +15,7 @@ export class ZohoEmailService implements EmailService{
 export class AWSSimpleEmailService implements EmailService{
   private readonly awsSecretKey: string
   private readonly awsAccessKeyId: string
-  constructor(awsSecretKey: string, awsAccessKeyId: string){
+  constructor(awsAccessKeyId: string, awsSecretKey: string){
     this.awsAccessKeyId = awsAccessKeyId
     this.awsSecretKey = awsSecretKey
   }
@@ -55,17 +56,17 @@ class EmailServiceFactory {
   }
 }
 
-EmailServiceFactory.getEmailService({
-  type: EmailServiceEnum.AwsSes,
-  config: {
-    awsAccessKeyId: "",
-    awsSecretKey: ""
-  }
-}).send("AWS", "Hello World")
+// EmailServiceFactory.getEmailService({
+//   type: EmailServiceEnum.AwsSes,
+//   config: {
+//     awsAccessKeyId: "",
+//     awsSecretKey: ""
+//   }
+// }).send("AWS", "Hello World")
 
-EmailServiceFactory.getEmailService({
-  type: EmailServiceEnum.Zoho,
-  config: {
-    zohoApiKey: ""
-  }
-}).send("Zoho", "Hello World")
+// EmailServiceFactory.getEmailService({
+//   type: EmailServiceEnum.Zoho,
+//   config: {
+//     zohoApiKey: ""
+//   }
+// }).send("Zoho", "Hello World")

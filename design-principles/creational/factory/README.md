@@ -1,5 +1,7 @@
 # Factory Pattern
 
+Factory Pattern is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+
 We are implementing two email services in Typescript
 1. AWS SES
 2. Zoho Zeptomail
