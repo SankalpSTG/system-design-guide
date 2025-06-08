@@ -1,7 +1,7 @@
 # Clarifying Questions
 
-1. [Designing Online/Offline indicator](#)
-1. [Designing Elevator System](#)
+1. [Designing Online/Offline indicator](https://github.com/SankalpSTG/system-design-guide/tree/main/claryfying-questions#designing-onlineoffline-indicator)
+1. [Designing Elevator System](https://github.com/SankalpSTG/system-design-guide/tree/main/claryfying-questions#designing-elevator-system)
 
 ## Designing Online/Offline indicator
 
